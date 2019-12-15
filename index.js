@@ -7,7 +7,7 @@ const packageFile = JSON.parse(rawdata);
 const app = express();
 const PORT = 8080;
 
-app.get('/', (req, res) => {
+app.get('/info', (req, res) => {
     res.json(packageFile);
   });
 
