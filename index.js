@@ -1,13 +1,10 @@
 const express = require('express');
 var packageFile = require('./package.json')
 
-//const fs = require('fs');
-//let rawdata = fs.readFileSync('package.json');
-//const packageFile = JSON.parse(rawdata);
-
 const app = express();
 const PORT = 8080;
 
+// this is an endpoint which returns server name and the version.
 app.get('/info', (req, res) => {
   let responseContent = { ServerName : packageFile.name,
 	Version : packageFile.version
